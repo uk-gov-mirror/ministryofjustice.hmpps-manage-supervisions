@@ -13,6 +13,10 @@ provide business logic APIs from the start.
 
 The above ADR mentions some consequences that are directly relevant to this project, in particular "Contracts between the UI and the service components will take a while to stabilise, creating churn in the beginning."
 
+Our service is intended to be run in a production environment, but is
+intended to test functionality with a very small number of users. It will
+not be mastering data to be reused by other services for the forseeable future.
+
 ## Decision
 
 We will initially build the "Manage a Sentence in the Community" product as a single server-side application.
@@ -23,7 +27,7 @@ We will do this because monolithic applications are quicker to get started with 
 does not confer any advantages at this early stage of development, and adds complexity to the iterative process of an
 early-stage application.
 
-For our product, which is aimed at a pilot at this point, we believe that this is a premature optimisation.
+For our product at this stage we believe that this is a premature optimisation.
 
 ## Consequences
 
