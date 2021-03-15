@@ -27,8 +27,8 @@ For our product, which is aimed at a pilot at this point, we believe that this i
 
 ## Consequences
 
-At some point it may be appropriate to split the application into a two-tier architecture that adds a business-level API
-that can be reused by other clients. That change will be documented in an ADR that supercedes this one.
+At some point it may be appropriate to split the application into a two-tier architecture that adds a business-level API or
+database storage that can be reused by other clients. That change will be documented in an ADR that supercedes this one.
 
 The software design of the application must take care to separate UI and business logic, to take into account that
 in future the business logic may need to be exposed via an API or reimplemented in Kotlin.
