@@ -15,7 +15,7 @@ The above ADR mentions some consequences that are directly relevant to this proj
 
 ## Decision
 
-We will initially build the "Manage a Sentence in the Community" product as a single server-side application in Node.js.
+We will initially build the "Manage a Sentence in the Community" product as a single server-side application.
 The same application will be responsible for user interface, database storage, and communication to external APIs. This
 is in contravention of the above HMPPS default, but is appropriate in this case.
 
