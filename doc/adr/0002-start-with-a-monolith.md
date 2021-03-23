@@ -19,7 +19,7 @@ not be mastering data to be reused by other services for the forseeable future.
 
 In this ADR, we use the following terminology:
 
-* *Monolith*: A single server-side application that renders a user interface, manages data storage, and provides APIs for third parties, within a particular bounded context. No implication is intended around the size of the application itself, or of its context.
+* *Monolith*: A single server-side application that renders a user interface, manages data storage, and provides APIs for third parties, within a particular bounded context. No implication is intended around the size of the application itself, or of its context. Small monoliths that only embody a few business processes within a microservices architecture are sometimes referred to as [microliths](https://en.paradigmadigital.com/techbiz/microservices-vs-microliths-vs-monoliths/). However, the term does not appear to be in common use, so while it might be appropriate, we do not use it here.
 
 ## Decision
 
