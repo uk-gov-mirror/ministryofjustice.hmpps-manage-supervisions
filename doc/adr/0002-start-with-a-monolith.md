@@ -17,6 +17,10 @@ Our service is intended to be run in a production environment, but is
 intended to test functionality with a very small number of users. It will
 not be mastering data to be reused by other services for the forseeable future.
 
+In this ADR, we use the following terminology:
+
+* *Monolith*: A single server-side application that renders a user interface, manages data storage, and provides APIs for third parties, within a particular bounded context. No implication is intended around the size of the application itself, or of its context.
+
 ## Decision
 
 We will initially build the "Manage a Sentence in the Community" product as a single server-side application.
