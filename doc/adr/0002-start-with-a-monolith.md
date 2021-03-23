@@ -27,11 +27,9 @@ We will initially build the "Manage a Sentence in the Community" product as a si
 The same application will be responsible for user interface, database storage, and communication to external APIs. This
 is in contravention of the above HMPPS default, but is appropriate in this case.
 
-We will do this because monolithic applications are quicker to get started with and iterate. A two-tier architecture
+We will do this because monolithic applications are quicker to get started with and iterate. A multi-tier architecture
 does not confer any advantages at this early stage of development, and adds complexity to the iterative process of an
-early-stage application.
-
-For our product at this stage we believe that this is a premature optimisation.
+early-stage application. For our product at this stage we believe that this is a premature optimisation.
 
 ## Consequences
 
