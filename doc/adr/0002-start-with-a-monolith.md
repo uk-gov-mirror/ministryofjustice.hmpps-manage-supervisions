@@ -1,4 +1,4 @@
-# 2. Build a Monolith
+# 2. Start with a Monolith
 
 Date: 2021-03-15
 
