@@ -14,8 +14,11 @@ provide business logic APIs from the start.
 The above ADR mentions some consequences that are directly relevant to this project, in particular "Contracts between the UI and the service components will take a while to stabilise, creating churn in the beginning."
 
 Our service is intended to be run in a production environment, but is
-intended to test functionality with a very small number of users. It will
-not be mastering data to be reused by other services for the forseeable future.
+intended to test a narrow range of functionality with a very small number of users.
+
+Our service replaces some functions currently in nDelius, but data needs to be written back to maintain data integrity. To do this, the service will be reading and writing from existing MoJ data providers (such as Community API or Assess Risks & Needs) to display and update live data.  Details of data flow and synchronisation will be addressed in a future ADR.
+
+Because data needed by other services will be written back into existing data providers such as nDelius, our service will not be mastering data to be accessed directly by other services for the forseeable future.
 
 In this ADR, we use the following terminology:
 
