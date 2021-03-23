@@ -42,6 +42,12 @@ will not be internally split into a user interface and API backend.
 At some point it may be appropriate to split the application into a two-tier architecture that adds a business-level API or
 database storage that can be reused by other clients. That change will be documented in an ADR that supercedes this one.
 
+A choice to split the application in future will be based in part on the following criteria:
+
+* Identification of smaller reusable bounded contexts within the application. For instance, calendar integration might be reusable by other services, and be split out.
+* Pushing functionality into the browser client. If the user interface becomes more focused on running in the browser for performance or other reasons, a proper _internal_ business logic API will be required.
+* If data mastered by this application needs to be exposed to other users, appropriate _external_ APIs will need to be built. These could be built in the monolith, but the team may wish to "dogfood" the APIs by changing our user interface to use them as well.
+
 The internal software design of the application must take care to separate UI and business logic, to take into account that
 in future the business logic may need to be exposed via an API or reimplemented in Kotlin. Tight coupling of UI and business logic should be avoided.
 
