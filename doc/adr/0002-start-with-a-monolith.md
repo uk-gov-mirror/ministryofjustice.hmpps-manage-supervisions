@@ -47,6 +47,7 @@ A choice to split the application in future will be based in part on the followi
 * Identification of smaller reusable bounded contexts within the application. For instance, calendar integration might be reusable by other services, and be split out.
 * Pushing functionality into the browser client. If the user interface becomes more focused on running in the browser for performance or other reasons, a proper _internal_ business logic API will be required.
 * If data mastered by this application needs to be exposed to other users, appropriate _external_ APIs will need to be built. These could be built in the monolith, but the team may wish to "dogfood" the APIs by changing our user interface to use them as well.
+* Performance issues, such as high volumes of data throughput. If business logic code is properly identified as the bottleneck, it could be split out in order to optimise or reimplement in a higher-performance language.
 
 The internal software design of the application must take care to separate UI and business logic, to take into account that
 in future the business logic may need to be exposed via an API or reimplemented in Kotlin. Tight coupling of UI and business logic should be avoided.
