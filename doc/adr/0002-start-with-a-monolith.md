@@ -43,4 +43,4 @@ At some point it may be appropriate to split the application into a two-tier arc
 database storage that can be reused by other clients. That change will be documented in an ADR that supercedes this one.
 
 The internal software design of the application must take care to separate UI and business logic, to take into account that
-in future the business logic may need to be exposed via an API or reimplemented in Kotlin.
+in future the business logic may need to be exposed via an API or reimplemented in Kotlin. Tight coupling of UI and business logic should be avoided.
