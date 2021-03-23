@@ -23,7 +23,7 @@ In this ADR, we use the following terminology:
 
 ## Decision
 
-We will initially build the "Manage a Sentence in the Community" product as a single server-side application.
+We will initially build the "Manage a Sentence in the Community" product as a single server-side application, following the [MonolithFirst](https://www.martinfowler.com/bliki/MonolithFirst.html) strategy described by Martin Fowler.
 The same application will be responsible for user interface, database storage, and communication to external APIs. This
 is in contravention of the above HMPPS default, but is appropriate in this case.
 
