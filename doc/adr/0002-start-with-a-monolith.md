@@ -16,7 +16,7 @@ The above ADR mentions some consequences that are directly relevant to this proj
 Our service is intended to be run in a production environment, but is
 intended to test a narrow range of functionality with a very small number of users.
 
-Our service replaces some functions currently in nDelius, but data needs to be written back to maintain data integrity. To do this, the service will be reading and writing from existing MoJ data providers (such as Community API or Assess Risks & Needs) to display and update live data.  Details of data flow and synchronisation will be addressed in a future ADR.
+Our service replaces some functions currently in nDelius, but data needs to be written back to maintain data integrity. To do this, the service will be reading and writing from existing HMPPS data providers (such as Community API or Assess Risks & Needs) to display and update live data.  Details of data flow and synchronisation will be addressed in a future ADR.
 
 Because data needed by other services will be written back into existing data providers such as nDelius, our service will not be mastering data to be accessed directly by other services for the forseeable future.
 
@@ -33,6 +33,9 @@ is in contravention of the above HMPPS default, but is appropriate in this case.
 We will do this because monolithic applications are quicker to get started with and iterate. A multi-tier architecture
 does not confer any advantages at this early stage of development, and adds complexity to the iterative process of an
 early-stage application. For our product at this stage we believe that this is a premature optimisation.
+
+Note that this design does not mean that the application stands alone. It will use other MoJ services for access to existing data, or for functionality outside its own bounded context (i.e. authentication). The application will act as a microservice within the HMPPS architecture, but
+will not be internally split into a user interface and API backend.
 
 ## Consequences
 
