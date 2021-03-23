@@ -44,3 +44,5 @@ database storage that can be reused by other clients. That change will be docume
 
 The internal software design of the application must take care to separate UI and business logic, to take into account that
 in future the business logic may need to be exposed via an API or reimplemented in Kotlin. Tight coupling of UI and business logic should be avoided.
+
+These consequences need to be kept under review by HMPPS, to make sure that the ADR still applies and if not, to make a decision to change structure. While active, the team will implicitly keep this decision under review, but if the project does not have a sprinting team building it, an occasional review still needs to be done, especially if development work is to restart.
