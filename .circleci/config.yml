@@ -149,9 +149,9 @@ workflows:
           #     only:
           #       - main
           requires:
-            - helm_lint
-            - unit_test
-            - integration_test
+            # - helm_lint
+            # - unit_test
+            # - integration_test
             - build_docker
 
   security:
